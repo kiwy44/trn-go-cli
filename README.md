@@ -1,6 +1,6 @@
 # Go - Parancssori alkalmazás (Cobra-Cli)
 
-Parancssori alkalmazást készítünk, amellyel nagyon sok lehetőségünk van olyan funkciókat egyben használni, amelyeket máskülönben sok-sok külön eszközzel bvennénk igénybe. Ehhez a [Cobra](https://github.com/spf13/cobra)-t használjuk.
+Parancssori alkalmazást készítünk, amellyel nagyon sok lehetőségünk van olyan funkciókat egyben használni, amelyeket máskülönben sok-sok külön eszközzel bvennénk igénybe. Ehhez a [Cobra](https://github.com/spf13/cobra)-t használjuk. Olyan alkalmazást hozunk létre most, amely bizonyos súlyosságú hibákat képes fájlba írni.
 
 ## Előfeltételek
 
