@@ -9,14 +9,14 @@ import (
 var appVersion bool
 
 var rootCmd = &cobra.Command{
-	Use:           "cool-cli",
-	Short:         "Cli csak úgy",
-	Long:          `Parancssori alkalmazás, csak úgy`,
+	Use:           "trn-go-cli",
+	Short:         "Cli hasznos dolgoknak",
+	Long:          `Parancssori alkalmazás, hogy a hasznos dolgokat egyben kezelhessem`,
 	SilenceErrors: false,
 	SilenceUsage:  false,
 	Run: func(cmd *cobra.Command, args []string) {
 		if appVersion {
-			log.Printf("Version number: %s\n", "1.0.0")
+			log.Printf("Verzió szám: %s\n", "1.0.0")
 		}
 	},
 }
@@ -28,5 +28,5 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.Flags().BoolVarP(&appVersion, "version", "v", false, "Get version number")
+	rootCmd.Flags().BoolVarP(&appVersion, "verzio", "v", false, "Mutasd a verzió számot")
 }

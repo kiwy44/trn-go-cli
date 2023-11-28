@@ -10,22 +10,22 @@ Az alábbi helyen megtalálod az előkészületeket a Go-ban való fejlesztéshe
 
 1. Nyiss egy parancssort (CMD)
 2. Navigálj abba a mappába ahol a kódod fogod tárolni a helyi gépeden.
-3. Hozd létre a projekted mappáját. Pl.: `cool-cli`
+3. Hozd létre a projekted mappáját. Pl.: `trn-go-cli`
 
 ```bash
-mkdir cool-cli
+mkdir trn-go-cli
 ```
 
 4. Lépj be a mappába
 
 ```bash
-cd cool-cli
+cd trn-go-cli
 ```
 
-5. Készítsd el a projekted alap struktúráját
+5. Készítsd el a projekted alap struktúráját (`github.com/cloudsteak/trn-go-cli` helyett használd a saját kódodhoz tartozó github elérhetőséget)
 
 ```bash
-go mod init cool-cli
+go mod init github.com/cloudsteak/trn-go-cli
 ```
 
 6. indítsd el innen a Visual Studio Code-ot.
@@ -41,7 +41,7 @@ code .
 
 ```go
 mkdir cmd
-mkdir -p pkg/utils
+mkdir -p pkg
 ```
 
 2. Hozd létre a `main.go` fájlt a projekt gyökerében
