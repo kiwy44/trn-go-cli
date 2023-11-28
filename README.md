@@ -367,17 +367,17 @@ go get .
 Adjunk hozzá néhány bejegyzést. Használjuk ehhez a fordított exe-t
 
 ```bash
-trn-go-cli.exe naplo ir -b "Sikeresen bejelentkezett." -s "INFO"
-trn-go-cli.exe naplo ir -b "A keresett oldal nem található. Kérjük, ellenőrizze az URL-t, és próbálja meg újra." -s "ERROR"
-trn-go-cli.exe naplo ir -b "Sikeresen frissítette a felhasználói adatait." -s "INFO"
-trn-go-cli.exe naplo ir -b "Az akkumulátor töltöttsége alacsony. Kérjük, csatlakoztassa a készüléket egy töltőhöz." -s "WARN"
-trn-go-cli.exe naplo ir -b "Az Ön munkamenete lejárt. Kérjük, jelentkezzen be újra a folytatáshoz." -s "WARN"
-trn-go-cli.exe naplo ir -b "Váratlan rendszerhiba történt. Próbálkozzon újra később, vagy lépjen kapcsolatba a támogatással." -s "ERROR"
-trn-go-cli.exe naplo ir -b "Sikeresen elfogadta a szerződési feltételeket. Most már hozzáférhet az alkalmazás teljes funkcionalitásához." -s "INFO"
-trn-go-cli.exe naplo ir -b "Nem sikerült kapcsolódni a szerverhez. Kérjük, ellenőrizze internetkapcsolatát és próbálja újra." -s "ERROR"
-trn-go-cli.exe naplo ir -b "Az alkalmazás használatához frissítse a licencét." -s "WARN"
-trn-go-cli.exe naplo ir -b "A tranzakció sikeresen megtörtént. Köszönjük a vásárlást" -s "INFO"
-trn-go-cli.exe naplo ir -b "Sikeresen kijelentkezett. Várjuk vissza" -s INFO
+./trn-go-cli.exe naplo ir -b "Sikeresen bejelentkezett." -s "INFO"
+./trn-go-cli.exe naplo ir -b "A keresett oldal nem található. Kérjük, ellenőrizze az URL-t, és próbálja meg újra." -s "ERROR"
+./trn-go-cli.exe naplo ir -b "Sikeresen frissítette a felhasználói adatait." -s "INFO"
+./trn-go-cli.exe naplo ir -b "Az akkumulátor töltöttsége alacsony. Kérjük, csatlakoztassa a készüléket egy töltőhöz." -s "WARN"
+./trn-go-cli.exe naplo ir -b "Az Ön munkamenete lejárt. Kérjük, jelentkezzen be újra a folytatáshoz." -s "WARN"
+./trn-go-cli.exe naplo ir -b "Váratlan rendszerhiba történt. Próbálkozzon újra később, vagy lépjen kapcsolatba a támogatással." -s "ERROR"
+./trn-go-cli.exe naplo ir -b "Sikeresen elfogadta a szerződési feltételeket. Most már hozzáférhet az alkalmazás teljes funkcionalitásához." -s "INFO"
+./trn-go-cli.exe naplo ir -b "Nem sikerült kapcsolódni a szerverhez. Kérjük, ellenőrizze internetkapcsolatát és próbálja újra." -s "ERROR"
+./trn-go-cli.exe naplo ir -b "Az alkalmazás használatához frissítse a licencét." -s "WARN"
+./trn-go-cli.exe naplo ir -b "A tranzakció sikeresen megtörtént. Köszönjük a vásárlást" -s "INFO"
+./trn-go-cli.exe naplo ir -b "Sikeresen kijelentkezett. Várjuk vissza" -s INFO
 ```
 
 ## Naplóbejegyzések olvasása a fájlból
@@ -385,17 +385,17 @@ trn-go-cli.exe naplo ir -b "Sikeresen kijelentkezett. Várjuk vissza" -s INFO
 ### INFO
 
 ```bash
-trn-go-cli.exe naplo olvas -s "INFO"
+./trn-go-cli.exe naplo olvas -s "INFO"
 ```
 
 ### WARN
 
 ```bash
-trn-go-cli.exe naplo olvas -s "WARN"
+./trn-go-cli.exe naplo olvas -s "WARN"
 ```
 
 ### ERROR
 
 ```bash
-trn-go-cli.exe naplo olvas -s "ERROR"
+./trn-go-cli.exe naplo olvas -s "ERROR"
 ```
