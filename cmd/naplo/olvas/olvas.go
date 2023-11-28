@@ -28,16 +28,16 @@ func NewCmd() *cobra.Command {
 		},
 	}
 
-	// Pataméterek beállítása
+	// Paraméterek beállítása
 	cmd.Flags().StringVarP(&o.naploFajl, "naplo-fajl", "f", "./naplo.log", "Napló fájl elérési útja")
-	cmd.Flags().StringVarP(&o.sulyossag, "suly", "s", "INFO", "Berjegyzés súlyossága. Alapértelmezett: INFO. Lehetőségek: ERROR, WARNING, INFO")
+	cmd.Flags().StringVarP(&o.sulyossag, "suly", "s", "INFO", "Berjegyzés súlyossága. Alapértelmezett: INFO. Lehetőségek: ERROR, WARN, INFO")
 
 	return cmd
 }
 
 func run(o *options) error {
 	// Súlyosságok
-	sulyok := []string{"ERROR", "INFO", "WARNING"}
+	sulyok := []string{"ERROR", "INFO", "WARN"}
 
 	// Naplófájl paraméter ellenőrzése
 	if o.naploFajl == "" {
