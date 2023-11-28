@@ -3,6 +3,7 @@ package cmd
 import (
 	"log"
 
+	"github.com/cloudsteak/trn-go-cli/cmd/naplo"
 	"github.com/spf13/cobra"
 )
 
@@ -27,6 +28,8 @@ func Execute() {
 	}
 }
 
+// További parancsok, lehetőségek
 func init() {
 	rootCmd.Flags().BoolVarP(&appVersion, "verzio", "v", false, "Mutasd a verzió számot")
+	rootCmd.AddCommand(naplo.NewCmd())
 }

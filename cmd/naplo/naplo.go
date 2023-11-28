@@ -1,6 +1,8 @@
 package naplo
 
 import (
+	"github.com/cloudsteak/trn-go-cli/cmd/naplo/ir"
+	"github.com/cloudsteak/trn-go-cli/cmd/naplo/olvas"
 	"github.com/spf13/cobra"
 )
 
@@ -12,9 +14,8 @@ func NewCmd() *cobra.Command {
 		SilenceErrors: false,
 		SilenceUsage:  false,
 	}
-
+	// Parancsok
 	logCmd.AddCommand(olvas.NewCmd())
 	logCmd.AddCommand(ir.NewCmd())
-
 	return logCmd
 }

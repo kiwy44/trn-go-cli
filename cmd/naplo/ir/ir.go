@@ -6,9 +6,11 @@ import (
 
 	"slices"
 
+	"github.com/cloudsteak/trn-go-cli/pkg"
 	"github.com/spf13/cobra"
 )
 
+// Paraméterek
 type options struct {
 	naploFajl string
 	sulyossag string
@@ -27,7 +29,8 @@ func NewCmd() *cobra.Command {
 		},
 	}
 
-	cmd.Flags().StringVarP(&o.naploFajl, "naplo-fajl", "f", "./naplo.log", "Napló fájl elérési útja")
+	// Pataméterek beállítása
+	cmd.Flags().StringVarP(&o.naploFajl, "naplo-fajl", "f", "naplo.log", "Napló fájl elérési útja")
 	cmd.Flags().StringVarP(&o.sulyossag, "suly", "s", "INFO", "Berjegyzés súlyossága. Alapértelmezett: INFO. Lehetőségek: ERROR, WARNING, INFO")
 	cmd.Flags().StringVarP(&o.bejegyzes, "bejegyzes", "b", "", "Bejegyzés, üzenet")
 
@@ -35,24 +38,28 @@ func NewCmd() *cobra.Command {
 }
 
 func run(o *options) error {
-
+	// Súlyosságok
 	sulyok := []string{"ERROR", "INFO", "WARNING"}
 
+	// Naplófájl paraméter ellenőrzése
 	if o.naploFajl == "" {
 		err := errors.New("nincs naplófájl megadva")
 		return fmt.Errorf("%w", err)
 	}
 
+	// Súlyosság paraméter ellenőrzése
 	if !slices.Contains(sulyok, o.sulyossag) {
 		err := errors.New("nem megfelelő súlyosság")
 		return fmt.Errorf("%w: %s", err, o.sulyossag)
 	}
 
+	// Bejegyzés ellenőrzése
 	if o.bejegyzes == "" {
 		err := errors.New("bejegyzés, üzenet nem lehet üres")
 		return fmt.Errorf("%w", err)
 	}
 
-	pkg.logIro(o.naploFajl, o.sulyossag, o.bejegyzes)
+	// Napló írás függvény meghívása
+	pkg.NaploIro(o.naploFajl, o.sulyossag, o.bejegyzes)
 	return nil
 }

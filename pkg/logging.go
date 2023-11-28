@@ -6,9 +6,10 @@ import (
 	"log"
 	"os"
 	"strings"
+	"time"
 )
 
-func logOlvaso(naploFajl string, sullyossag string) {
+func NaploOlvaso(naploFajl string, sullyossag string) {
 	f, err := os.Open(naploFajl)
 	if err != nil {
 		log.Fatal(err)
@@ -28,13 +29,17 @@ func logOlvaso(naploFajl string, sullyossag string) {
 	}
 }
 
-func logIro(naploFajl string, sullyossag string, bejegyzes string) {
-	f, err := os.Open(naploFajl)
+func NaploIro(naploFajl string, sulyossag string, bejegyzes string) {
+
+	f, err := os.OpenFile(naploFajl,
+		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	l, err := f.WriteString("Hello World")
+	naploBejegyzes := (time.Now().Format(time.DateTime)) + " - " + sulyossag + " - " + bejegyzes + "\n"
+	fmt.Println(naploBejegyzes)
+	l, err := f.WriteString(naploBejegyzes)
 	if err != nil {
 		log.Fatalln(err)
 		defer f.Close()
