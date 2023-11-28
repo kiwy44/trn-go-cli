@@ -307,7 +307,7 @@ var rootCmd = &cobra.Command{
 }
 
 func Execute() {
-	if err := rootCmd.Execute() err != nil {
+	if err := rootCmd.Execute(); err != nil {
 		log.Fatal(err)
 	}
 }
@@ -317,6 +317,7 @@ func init() {
 	rootCmd.Flags().BoolVarP(&appVersion, "verzio", "v", false, "Mutasd a verzió számot")
 	rootCmd.AddCommand(naplo.NewCmd())
 }
+
 
 ```
 
