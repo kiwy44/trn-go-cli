@@ -6,7 +6,7 @@ import (
 
 	"slices"
 
-	"github.com/cloudsteak/trn-go-cli/pkg"
+	"github.com/kiwy44/trn-go-cli/pkg"
 	"github.com/spf13/cobra"
 )
 

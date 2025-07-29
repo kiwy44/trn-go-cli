@@ -1,10 +1,10 @@
-module github.com/cloudsteak/trn-go-cli
+module github.com/kiwy44/trn-go-cli
 
-go 1.21.3
+go 1.24.5
 
-require github.com/spf13/cobra v1.8.0
+require github.com/spf13/cobra v1.9.1
 
 require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
-	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/spf13/pflag v1.0.7 // indirect
 )

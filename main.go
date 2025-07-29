@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/cloudsteak/trn-go-cli/cmd"
+	"github.com/kiwy44/trn-go-cli/cmd"
 )
 
 func main() {

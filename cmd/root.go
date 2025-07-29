@@ -3,7 +3,7 @@ package cmd
 import (
 	"log"
 
-	"github.com/cloudsteak/trn-go-cli/cmd/naplo"
+	"github.com/kiwy44/trn-go-cli/cmd/naplo"
 	"github.com/spf13/cobra"
 )
 
