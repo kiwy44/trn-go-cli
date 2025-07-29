@@ -28,7 +28,7 @@ func NaploOlvaso(naploFajl string, sullyossag string) {
 		}
 		// Ha megvan a megfeleő súlyosság, akkor kiírjuk a képernyőre
 		if strings.Contains(s, " - "+sullyossag+" - ") {
-			fmt.Println(s)
+			fmt.Print(s)
 		}
 	}
 }
