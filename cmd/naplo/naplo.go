@@ -1,8 +1,8 @@
 package naplo
 
 import (
-	"github.com/cloudsteak/trn-go-cli/cmd/naplo/ir"
-	"github.com/cloudsteak/trn-go-cli/cmd/naplo/olvas"
+	"github.com/kiwy44/trn-go-cli/cmd/naplo/ir"
+	"github.com/kiwy44/trn-go-cli/cmd/naplo/olvas"
 	"github.com/spf13/cobra"
 )
 
